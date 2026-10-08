@@ -10,64 +10,16 @@ class HamsterGacha extends StatefulWidget {
   State<HamsterGacha> createState() => _HamsterGachaState();
 }
 
-class HamsterGacha extends StatefulWidget {
+class _HamsterGachaState extends State<HamsterGacha> {
   int n = 0, e = 0;
   bool loading = false;
-  final emojis = ['🐱', '🐾', '😺', '✨'];
+  final emojis = ['🤍', '❄️', '🤍', '❄️'];
   final images = [
-  "https://kmc2400.github.io/hamster-images/acidfern-_ASImGUewVM-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/adela-monczkova-IvJa_c8THWg-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/adela-monczkova-qmiID5T8_uA-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/alex-konokh-6MKJbkZ0qNY-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/andy-holmes-fyc0u7SoBOQ-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/bjorn-antonissen-YkRRIEkVajk-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/bonnie-kittle-MUcxe_wDurE-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/denis-bayer-4KC4hUWCtJI-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/doina-gavrilov-BpAnE1DVWEs-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/finney-kFh7PHBKWd0-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/frances-goldberg-mnOVgsxg-8E-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/frenjamin-benklin-2Px6-jGGH_w-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/frenjamin-benklin-6yKTcxJhbQ8-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/frenjamin-benklin-8gOu6m_tj-0-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/frenjamin-benklin-i0OwUyZ4QW0-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/frenjamin-benklin-KIXHGKPswE0-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/frenjamin-benklin-waKf09YkDcw-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/guillermo-velarde-JlI9qNsD-Uw-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/gustavo-zambelli-mwwRDU_ekjw-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/henry-lai-2uTVeLDQQkk-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/henry-lai-ZKLsj6xruAk-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/jaroslaw-slodkiewicz-SDIIfq6nhFU-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/jay-nlper-Tpff0kOfhYw-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/juliya-sidorova-FOxMZK1VQS8-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/katherine-mcadoo-vSS2_KfzbLY-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/kim-green-1VY30CTcsqE-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/kim-green-D_pXn7cueOs-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/leslie-soto-Py1iPnpzLoo-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/matt-bero-wMXetxdXeZM-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/melissa-keizer-2Qs3kvXGwjg-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/melissa-keizer-UTv7cPiNsug-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/nick-fewings--dtKoaHpi9M-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/nikolett-emmert-4WDzXJrPNLE-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/nikolett-emmert-FsBKr0AOirM-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/nikolett-emmert-WiBYpESTwb8-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/nikolett-emmert-ZSc4X_rqjL8-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/nils-schirmer-cKYM8KMwaUQ-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/peter-steiner-1973-fcXMGrmk64o-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/raychan-8IW8f37QAYA-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/ricky-kharawala-adK3Vu70DEQ-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/silje-roseneng-cMp84C0fPSg-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/sunira-moses-aXK_a0xxmW0-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/sunira-moses-r149yvhlJ4Q-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/yosei-g-OVgE3m4MHKM-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/zdenek-machacek-WZC1_6ChfMs-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/zhaoli-jin-57ePgTDfwWM-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/zhaoli-jin-83lFoPXYbkA-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/zhaoli-jin-cgnDJkzWkTg-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/zhaoli-jin-g6q1ko1ghos-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/zhaoli-jin-MwJ-VkhxOBs-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/zhaoli-jin-ntpFNTy_XzY-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/zhaoli-jin-u33lLlcLoys-unsplash.jpg",
-  "https://kmc2400.github.io/hamster-images/zhaoli-jin-Xtb_lO_9r6Q-unsplash.jpg"
+  "https://images.unsplash.com/photo-1698949171619-a55804ef6ac1?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TG9uZy10YWlsZWQlMjBUaXR8ZW58MHx8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1746440256483-264b37b4bb2a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8TG9uZy10YWlsZWQlMjBUaXR8ZW58MHx8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1640374577565-4cd9da10bb80?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8TG9uZy10YWlsZWQlMjBUaXR8ZW58MHx8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1640374577083-5682b1c9dc40?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fExvbmctdGFpbGVkJTIwVGl0fGVufDB8fDB8fHww",
+
   ];
 
   Future<void> gacha() async {
@@ -78,12 +30,17 @@ class HamsterGacha extends StatefulWidget {
     }
       n = Random().nextInt(images.length);
       loading = false;
-    }
   }
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: const Text('🐱 Cat Gacha')),
+    backgroundColor: const Color(0xFFEAF7FF),
+    appBar: AppBar(
+      backgroundColor: Colors.white,
+      surfaceTintColor: Colors.transparent,
+      centerTitle: true,
+      title: const Text('❄️シマエナガ❄️'),
+    ),
     body: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -101,6 +58,7 @@ class HamsterGacha extends StatefulWidget {
                 : Image.network(images[n], fit: BoxFit.cover),
           ),
           const SizedBox(height: 30),
+          const Text('🎰', style: TextStyle(fontSize: 72)),
           ElevatedButton(
             onPressed: loading ? null : gacha,
             child: const Text('ガチャを回す！'),
